@@ -1,4 +1,4 @@
-public class Forward {
+public class ForwardAction {
 
     public Position forward(Position position) {
         switch (position.direction()) {
@@ -14,4 +14,6 @@ public class Forward {
                 return position;
         }
     }
+
+
 }
