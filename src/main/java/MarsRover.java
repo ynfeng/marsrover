@@ -4,9 +4,10 @@
 public class MarsRover {
 
     private Area workArea;
+    private Position position;
 
-    public void deploy(int x, int y, String direction) {
-
+    public void deploy(Position position) {
+        this.position = position;
     }
 
     public void workRage(Area workArea) {
