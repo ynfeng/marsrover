@@ -1,3 +1,6 @@
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.CoreMatchers.is;
+
 import org.junit.Test;
 
 /**
@@ -17,15 +20,20 @@ public class MarsRoverTest {
 //    }
 
     @Test
+    public void should_override_area_equals() {
+        assertThat(Area.of(10,10), is(Area.of(10,10)));
+    }
+
+    @Test
     public void should_set_work_range() {
         MarsRover marsRover = new MarsRover();
         marsRover.workRange(Area.of(10, 10));
     }
 
     @Test
-    public void should_deploy_mars_rover(){
+    public void should_deploy_mars_rover() {
         MarsRover marsRover = new MarsRover();
-        marsRover.deploy(0,0,"W");
+        marsRover.deploy(0, 0, "W");
     }
 
 
