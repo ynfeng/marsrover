@@ -13,14 +13,14 @@ public class Position {
     }
 
     public Position plusX(int x) {
-        return of(this.x + 1, y, direction);
+        return of(this.x + x, y, direction);
     }
 
     public Position subX(int x) {
-        return of(this.x - 1, y, direction);
+        return of(this.x - x, y, direction);
     }
 
-    public Position pluxY(int y) {
+    public Position plusY(int y) {
         return of(x, this.y + y, direction);
     }
 
