@@ -56,7 +56,7 @@ public class MarsRover {
     }
 
     public Position executeBatchCommand(List<Command> commands) {
-        commands.forEach(Command::execute);
+        commands.forEach(command -> command.execute(this));
         return position;
     }
 }

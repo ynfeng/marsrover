@@ -3,21 +3,21 @@
  */
 public interface Command {
 
-    static Command forwardCommand(MarsRover marsRover) {
-        return new ForwardCommand(marsRover);
+    static Command forwardCommand() {
+        return new ForwardCommand();
     }
 
-    static Command backwardCommand(MarsRover marsRover) {
-        return new BackwardCommand(marsRover);
+    static Command backwardCommand() {
+        return new BackwardCommand();
     }
 
-    static Command rotateRightCommand(MarsRover marsRover) {
-        return new RotateRightCommand(marsRover);
+    static Command rotateRightCommand() {
+        return new RotateRightCommand();
     }
 
-    static Command rotateLeftCommand(MarsRover marsRover) {
-        return new RotateLeftCommand(marsRover);
+    static Command rotateLeftCommand() {
+        return new RotateLeftCommand();
     }
 
-    void execute();
+    void execute(MarsRover marsRover);
 }
