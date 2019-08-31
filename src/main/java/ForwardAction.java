@@ -1,10 +1,16 @@
 public class ForwardAction {
 
-    static ForwardAction createForwardAction(Position position) {
-        return new ForwardAction();
+    private final Position position;
+
+    public ForwardAction(Position position) {
+        this.position = position;
     }
 
-    public Position forward(Position position) {
+    static ForwardAction createForwardAction(Position position) {
+        return new ForwardAction(position);
+    }
+
+    public Position forward() {
         switch (position.direction()) {
             case EAST:
                 return position.plusX(1);
