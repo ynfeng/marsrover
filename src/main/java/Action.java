@@ -38,5 +38,9 @@ public abstract class Action {
         }
     }
 
+    public static Action createRotateLeftAction(Position position) {
+        return null;
+    }
+
     abstract Position doAction();
 }
