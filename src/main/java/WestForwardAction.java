@@ -1,7 +1,7 @@
 /**
  * @author fynwin@gmail.com
  */
-public class WestForwardAction extends ForwardAction {
+public class WestForwardAction extends Action{
     public WestForwardAction(Position position) {
         super(position);
     }
