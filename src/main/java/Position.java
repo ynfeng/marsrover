@@ -2,7 +2,7 @@
  * @author fynwin@gmail.com
  */
 public class Position {
-    private Direction direction;
+    private final Direction direction;
     private final int x;
     private final int y;
 
