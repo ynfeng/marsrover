@@ -161,7 +161,7 @@ public class MarsRoverTest {
         marsRover.workArea(Area.of(10, 10));
         marsRover.deploy(Position.of(5, 5, Direction.NORTH));
         Position position = marsRover.rotateRight();
-        assertThat(position, is(Position.of(5, 5, Direction.WEST)));
+        assertThat(position, is(Position.of(5, 5, Direction.EAST)));
     }
 
     @Test
