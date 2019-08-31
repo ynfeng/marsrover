@@ -7,7 +7,7 @@ public class SouthForwardAction extends ForwardAction {
     }
 
     @Override
-    public Position forward() {
+    public Position doAction() {
         return position.subY(1);
     }
 }

@@ -1,4 +1,4 @@
-public abstract class ForwardAction {
+public abstract class ForwardAction implements Action{
 
     protected final Position position;
 
@@ -20,7 +20,4 @@ public abstract class ForwardAction {
                 throw new IllegalStateException("Invalid direction");
         }
     }
-
-    abstract Position forward();
-
 }
