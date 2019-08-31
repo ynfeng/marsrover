@@ -21,13 +21,14 @@ public class MarsRoverTest {
 
     @Test
     public void should_override_area_equals() {
-        assertThat(Area.of(10,10), is(Area.of(10,10)));
+        assertThat(Area.of(10, 10), is(Area.of(10, 10)));
     }
 
     @Test
     public void should_set_work_range() {
         MarsRover marsRover = new MarsRover();
-        Area.of(10, 10).workRange();
+        marsRover.workRage(Area.of(10, 10));
+        assertThat(marsRover.workRage(), is(Area.of(10, 10)));
     }
 
     @Test

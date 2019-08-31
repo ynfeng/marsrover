@@ -38,8 +38,4 @@ public class Area {
         result = 31 * result + y;
         return result;
     }
-
-    public void workRange() {
-
-    }
 }
