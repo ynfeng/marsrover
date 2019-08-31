@@ -7,5 +7,9 @@ public interface Command {
         return new ForwardCommand(marsRover);
     }
 
+    static Command backwardCommand(MarsRover marsRover) {
+        return new BackwardCommand(marsRover);
+    }
+
     void execute();
 }

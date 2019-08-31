@@ -138,7 +138,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void should_rotate_right_to_east_given_face_to_south(){
+    public void should_rotate_right_to_east_given_face_to_south() {
         MarsRover marsRover = new MarsRover();
         marsRover.workArea(Area.of(10, 10));
         marsRover.deploy(Position.of(5, 5, Direction.SOUTH));
@@ -147,7 +147,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void should_rotate_right_to_north_given_face_to_east(){
+    public void should_rotate_right_to_north_given_face_to_east() {
         MarsRover marsRover = new MarsRover();
         marsRover.workArea(Area.of(10, 10));
         marsRover.deploy(Position.of(5, 5, Direction.EAST));
@@ -156,7 +156,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void should_rotate_right_to_west_given_face_to_north(){
+    public void should_rotate_right_to_west_given_face_to_north() {
         MarsRover marsRover = new MarsRover();
         marsRover.workArea(Area.of(10, 10));
         marsRover.deploy(Position.of(5, 5, Direction.NORTH));
@@ -165,7 +165,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void should_rotate_right_to_south_given_face_to_west(){
+    public void should_rotate_right_to_south_given_face_to_west() {
         MarsRover marsRover = new MarsRover();
         marsRover.workArea(Area.of(10, 10));
         marsRover.deploy(Position.of(5, 5, Direction.WEST));
@@ -174,12 +174,16 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void should_execute_batch_command(){
+    public void should_execute_batch_command() {
         MarsRover marsRover = new MarsRover();
         marsRover.workArea(Area.of(10, 10));
         marsRover.deploy(Position.of(5, 5, Direction.WEST));
+
         List<Command> commands = Lists.newArrayList();
         commands.add(Command.forwardCommand(marsRover));
+        commands.add(Command.forwardCommand(marsRover));
+        commands.add(Command.backwardCommand(marsRover));
+
         Position position = marsRover.executeBatchCommand(commands);
         assertThat(position, is(Position.of(4, 5, Direction.WEST)));
     }
