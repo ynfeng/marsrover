@@ -28,18 +28,18 @@ public class MarsRover {
     public Position forward() {
         Action forwardAction = Action.createForwardAction(position);
         Position newPosition = forwardAction.doAction(this);
-        if (posistionSensor.isInWorkArea(workArea, newPosition)) {
-            position = newPosition;
-        }
+        position = posistionSensor.isInWorkArea(workArea, newPosition)
+            ? newPosition
+            : position;
         return position;
     }
 
     public Position backward() {
         Action backwardAction = Action.createBackwardAction(position);
         Position newPosition = backwardAction.doAction(this);
-        if (posistionSensor.isInWorkArea(workArea, newPosition)) {
-            position = newPosition;
-        }
+        position = posistionSensor.isInWorkArea(workArea, newPosition)
+            ? newPosition
+            : position;
         return position;
     }
 
