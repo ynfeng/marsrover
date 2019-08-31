@@ -1,6 +1,6 @@
 public class ForwardAction {
 
-    private final Position position;
+    protected  final Position position;
 
     public ForwardAction(Position position) {
         this.position = position;
@@ -23,8 +23,6 @@ public class ForwardAction {
 
     public Position forward() {
         switch (position.direction()) {
-            case EAST:
-                return position.plusX(1);
             case WEST:
                 return position.subX(1);
             case NORTH:
