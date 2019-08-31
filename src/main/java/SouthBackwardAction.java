@@ -1,13 +1,13 @@
 /**
  * @author fynwin@gmail.com
  */
-public class SouthBackwardAction extends BackwardAction {
+public class SouthBackwardAction extends Action{
     public SouthBackwardAction(Position position) {
         super(position);
     }
 
     @Override
-    public Position backward() {
+    public Position doAction() {
         return position.plusY(1);
     }
 }

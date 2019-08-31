@@ -1,9 +1,9 @@
 /**
  * @author fynwin@gmail.com
  */
-public class EastBackwardAction extends BackwardAction {
+public class EastBackwardAction extends Action{
     @Override
-    public Position backward() {
+    public Position doAction() {
         return position.subX(1);
     }
 

@@ -1,9 +1,9 @@
 /**
  * @author fynwin@gmail.com
  */
-public class WestBackwardAction extends BackwardAction {
+public class WestBackwardAction extends Action{
     @Override
-    public Position backward() {
+    public Position doAction() {
         return position.plusX(1);
     }
 

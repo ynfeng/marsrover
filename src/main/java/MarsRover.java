@@ -31,8 +31,8 @@ public class MarsRover {
     }
 
     public Position backward() {
-        BackwardAction backwardAction = BackwardAction.createBackwardAction(position);
-        position = backwardAction.backward();
+        Action backwardAction = Action.createBackwardAction(position);
+        position = backwardAction.doAction();
         return position;
     }
 
