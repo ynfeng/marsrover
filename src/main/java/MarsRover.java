@@ -5,6 +5,7 @@ import java.util.List;
  */
 public class MarsRover {
 
+    private final Forward forward = new Forward();
     private Area workArea;
     private Position position;
 
@@ -25,20 +26,7 @@ public class MarsRover {
     }
 
     public Position forward() {
-        switch (position.direction()) {
-            case EAST:
-                position = position.plusX(1);
-                break;
-            case WEST:
-                position = position.subX(1);
-                break;
-            case NORTH:
-                position = position.plusY(1);
-                break;
-            case SOUTH:
-                position = position.subY(1);
-                break;
-        }
+        position = forward.forward(position);
         return position;
     }
 
