@@ -3,8 +3,8 @@
  */
 public class Position {
     private Direction direction;
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
 
     private Position(int x, int y, Direction direction) {
         this.x = x;
