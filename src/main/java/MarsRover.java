@@ -17,4 +17,8 @@ public class MarsRover {
     public Area workRage() {
         return workArea;
     }
+
+    public Position position() {
+        return position;
+    }
 }

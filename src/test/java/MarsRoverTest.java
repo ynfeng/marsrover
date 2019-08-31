@@ -35,7 +35,7 @@ public class MarsRoverTest {
     public void should_deploy_mars_rover() {
         MarsRover marsRover = new MarsRover();
         marsRover.deploy(Position.of(0, 0, Direction.WEST));
-        
+        assertThat(marsRover.position(), is(Position.of(0, 0, Direction.WEST)));
     }
 
 
