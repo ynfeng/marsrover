@@ -193,7 +193,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void should_not_forward_out_of_work_area_when_face_to_west() {
+    public void should_not_forward_out_of_work_area(){
         MarsRover marsRover = new MarsRover();
         marsRover.workArea(Area.of(1, 1));
         marsRover.deploy(Position.of(0, 0, Direction.WEST));
