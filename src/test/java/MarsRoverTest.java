@@ -1,6 +1,8 @@
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.is;
 
+import com.google.common.collect.Lists;
+import java.util.List;
 import org.junit.Test;
 
 /**
@@ -169,5 +171,15 @@ public class MarsRoverTest {
         marsRover.deploy(Position.of(5, 5, Direction.WEST));
         Position position = marsRover.rotateRight();
         assertThat(position, is(Position.of(5, 5, Direction.SOUTH)));
+    }
+
+    @Test
+    public void should_execute_batch_command(){
+        MarsRover marsRover = new MarsRover();
+        marsRover.workArea(Area.of(10, 10));
+        marsRover.deploy(Position.of(5, 5, Direction.WEST));
+        List<Command> commands = Lists.newArrayList();
+        commands.add(Command.forwardCommand(marsRover));
+        marsRover.executeBatchCommand(commands);
     }
 }

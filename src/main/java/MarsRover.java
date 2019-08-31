@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * @author fynwin@gmail.com
  */
@@ -92,5 +94,9 @@ public class MarsRover {
                 break;
         }
         return position;
+    }
+
+    public Position executeBatchCommand(List<Command> commands) {
+        return null;
     }
 }
