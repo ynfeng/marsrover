@@ -31,20 +31,8 @@ public class MarsRover {
     }
 
     public Position backward() {
-        switch (position.direction()) {
-            case EAST:
-                position = position.subX(1);
-                break;
-            case WEST:
-                position = position.plusX(1);
-                break;
-            case NORTH:
-                position = position.subY(1);
-                break;
-            case SOUTH:
-                position = position.plusY(1);
-                break;
-        }
+        BackwardAction backwardAction = BackwardAction.createBackwardAction(position);
+        position = backwardAction.backward();
         return position;
     }
 
