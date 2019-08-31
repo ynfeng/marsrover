@@ -16,6 +16,10 @@ public class Position {
         this.x += x;
     }
 
+    public void subX(int x) {
+        this.x -= x;
+    }
+
     public void plusY(int y) {
         this.y += y;
     }
