@@ -79,7 +79,7 @@ public class MarsRover {
     }
 
     public Position rotateRight() {
-        switch (position.direction()){
+        switch (position.direction()) {
             case SOUTH:
                 position = Position.of(position.x(), position.y(), Direction.EAST);
                 break;
@@ -97,6 +97,7 @@ public class MarsRover {
     }
 
     public Position executeBatchCommand(List<Command> commands) {
-        return null;
+        commands.forEach(Command::execute);
+        return position;
     }
 }

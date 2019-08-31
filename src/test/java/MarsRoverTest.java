@@ -180,6 +180,7 @@ public class MarsRoverTest {
         marsRover.deploy(Position.of(5, 5, Direction.WEST));
         List<Command> commands = Lists.newArrayList();
         commands.add(Command.forwardCommand(marsRover));
-        marsRover.executeBatchCommand(commands);
+        Position position = marsRover.executeBatchCommand(commands);
+        assertThat(position, is(Position.of(4, 5, Direction.WEST)));
     }
 }

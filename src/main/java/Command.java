@@ -1,8 +1,11 @@
 /**
  * @author fynwin@gmail.com
  */
-public class Command {
-    public static Command forwardCommand(MarsRover marsRover) {
-        return null;
+public interface Command {
+
+    static Command forwardCommand(MarsRover marsRover) {
+        return new ForwardCommand(marsRover);
     }
+
+    void execute();
 }
