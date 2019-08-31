@@ -5,7 +5,6 @@ import java.util.List;
  */
 public class MarsRover {
 
-    private final Forward forward = new Forward();
     private Area workArea;
     private Position position;
 
@@ -26,6 +25,7 @@ public class MarsRover {
     }
 
     public Position forward() {
+        Forward forward = new Forward();
         position = forward.forward(position);
         return position;
     }
