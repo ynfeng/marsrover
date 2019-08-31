@@ -15,6 +15,14 @@ public class Area {
         return new Area(x, y);
     }
 
+    public int x(){
+        return x;
+    }
+
+    public int y(){
+        return y;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
