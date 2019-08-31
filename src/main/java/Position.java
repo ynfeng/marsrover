@@ -20,6 +20,10 @@ public class Position {
         return of(this.x - 1, y, direction);
     }
 
+    public Position pluxY(int y) {
+        return of(x, this.y + y, direction);
+    }
+
     public int x() {
         return x;
     }

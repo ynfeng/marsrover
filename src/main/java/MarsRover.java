@@ -30,6 +30,9 @@ public class MarsRover {
             case WEST:
                 position = position.subX(1);
                 break;
+            case NORTH:
+                position = position.pluxY(1);
+                break;
         }
         return position;
     }
