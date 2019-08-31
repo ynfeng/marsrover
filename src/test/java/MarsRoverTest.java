@@ -154,4 +154,13 @@ public class MarsRoverTest {
         Position position = marsRover.rotateRight();
         assertThat(position, is(Position.of(5, 5, Direction.EAST)));
     }
+
+    @Test
+    public void should_rotate_right_to_north_given_face_to_east(){
+        MarsRover marsRover = new MarsRover();
+        marsRover.workRage(Area.of(10, 10));
+        marsRover.deploy(Position.of(5, 5, Direction.EAST));
+        Position position = marsRover.rotateRight();
+        assertThat(position, is(Position.of(5, 5, Direction.NORTH)));
+    }
 }
