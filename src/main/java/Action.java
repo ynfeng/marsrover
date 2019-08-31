@@ -39,7 +39,15 @@ public abstract class Action {
     }
 
     public static Action createRotateLeftAction(Position position) {
-        return null;
+        switch (position.direction()) {
+            case EAST:
+            case WEST:
+            case NORTH:
+            case SOUTH:
+                return null;
+            default:
+                throw new IllegalStateException("Invalid direction");
+        }
     }
 
     abstract Position doAction();
