@@ -44,7 +44,7 @@ public abstract class Action {
             case WEST:
             case NORTH:
             case SOUTH:
-                return null;
+                return new SouthRotateLeftAction(position);
             default:
                 throw new IllegalStateException("Invalid direction");
         }
