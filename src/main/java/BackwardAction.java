@@ -1,5 +1,5 @@
 public class BackwardAction {
-    private final Position position;
+    protected final Position position;
 
     public BackwardAction(Position position) {
         this.position = position;
@@ -23,9 +23,7 @@ public class BackwardAction {
     public Position backward() {
         switch (position.direction()) {
             case EAST:
-                return position.subX(1);
             case WEST:
-                return position.plusX(1);
             case NORTH:
                 return position.subY(1);
             case SOUTH:
