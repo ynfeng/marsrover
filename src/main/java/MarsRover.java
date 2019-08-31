@@ -52,7 +52,7 @@ public class MarsRover {
                 position = Position.of(position.x(), position.y(), Direction.SOUTH);
                 break;
             case NORTH:
-                position = Position.of(position.x(), position.y(), Direction.EAST);
+                position = rotateRightAction.doAction();
                 break;
             case WEST:
                 position = Position.of(position.x(), position.y(), Direction.NORTH);
