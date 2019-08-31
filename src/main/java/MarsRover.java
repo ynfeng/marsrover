@@ -7,6 +7,7 @@ public class MarsRover {
 
     private Area workArea;
     private Position position;
+    private final PosistionSensor posistionSensor = new PosistionSensor();
 
     public void deploy(Position position) {
         this.position = position;
@@ -26,13 +27,19 @@ public class MarsRover {
 
     public Position forward() {
         Action forwardAction = Action.createForwardAction(position);
-        position = forwardAction.doAction(this);
+        Position newPosition = forwardAction.doAction(this);
+        if (posistionSensor.isInWorkArea(workArea, newPosition)) {
+            position = newPosition;
+        }
         return position;
     }
 
     public Position backward() {
         Action backwardAction = Action.createBackwardAction(position);
-        position = backwardAction.doAction(this);
+        Position newPosition = backwardAction.doAction(this);
+        if (posistionSensor.isInWorkArea(workArea, newPosition)) {
+            position = newPosition;
+        }
         return position;
     }
 
