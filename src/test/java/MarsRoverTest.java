@@ -110,4 +110,13 @@ public class MarsRoverTest {
         assertThat(position, is(Position.of(5, 6, Direction.SOUTH)));
     }
 
+    @Test
+    public void should_rotate_left_to_west_given_face_to_south() {
+        MarsRover marsRover = new MarsRover();
+        marsRover.workRage(Area.of(10, 10));
+        marsRover.deploy(Position.of(5, 5, Direction.SOUTH));
+        Position position = marsRover.rotateLeft();
+        assertThat(position, is(Position.of(5, 5, Direction.WEST)));
+    }
+
 }

@@ -57,4 +57,8 @@ public class MarsRover {
         }
         return position;
     }
+
+    public Position rotateLeft() {
+        return Position.of(position.x(), position.y(), Direction.WEST);
+    }
 }
