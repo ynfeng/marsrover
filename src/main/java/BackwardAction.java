@@ -1,4 +1,4 @@
-public class BackwardAction {
+public abstract class BackwardAction {
     protected final Position position;
 
     public BackwardAction(Position position) {
@@ -20,14 +20,5 @@ public class BackwardAction {
         }
     }
 
-    public Position backward() {
-        switch (position.direction()) {
-            case EAST:
-            case WEST:
-            case NORTH:
-            case SOUTH:
-            default:
-                throw new IllegalStateException("Invalid direction.");
-        }
-    }
+    abstract Position backward();
 }
