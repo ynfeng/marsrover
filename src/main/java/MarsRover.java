@@ -25,7 +25,7 @@ public class MarsRover {
     }
 
     public Position forward() {
-        ForwardAction forwardAction = new ForwardAction();
+        ForwardAction forwardAction = ForwardAction.createForwardAction(position);
         position = forwardAction.forward(position);
         return position;
     }

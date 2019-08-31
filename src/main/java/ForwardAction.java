@@ -1,5 +1,9 @@
 public class ForwardAction {
 
+    static ForwardAction createForwardAction(Position position) {
+        return new ForwardAction();
+    }
+
     public Position forward(Position position) {
         switch (position.direction()) {
             case EAST:
