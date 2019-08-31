@@ -42,18 +42,18 @@ public class MarsRoverTest {
     public void should_forward() {
         MarsRover marsRover = new MarsRover();
         marsRover.workRage(Area.of(10, 10));
-        marsRover.deploy(Position.of(0, 0, Direction.WEST));
+        marsRover.deploy(Position.of(0, 0, Direction.EAST));
         Position position = marsRover.forward();
-        assertThat(position, is(Position.of(0, 1, Direction.WEST)));
+        assertThat(position, is(Position.of(0, 1, Direction.EAST)));
     }
 
     @Test
     public void should_backward() {
         MarsRover marsRover = new MarsRover();
         marsRover.workRage(Area.of(10, 10));
-        marsRover.deploy(Position.of(5, 5, Direction.WEST));
+        marsRover.deploy(Position.of(5, 5, Direction.EAST));
         Position position = marsRover.backward();
-        assertThat(position, is(Position.of(4, 5, Direction.WEST)));
+        assertThat(position, is(Position.of(4, 5, Direction.EAST)));
     }
 
 }
