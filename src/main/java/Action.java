@@ -43,6 +43,7 @@ public abstract class Action {
             case EAST:
             case WEST:
             case NORTH:
+                return new NorthRotateLeftAction(position);
             case SOUTH:
                 return new SouthRotateLeftAction(position);
             default:

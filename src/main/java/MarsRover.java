@@ -46,7 +46,7 @@ public class MarsRover {
                 position = Position.of(position.x(), position.y(), Direction.SOUTH);
                 break;
             case NORTH:
-                position = Position.of(position.x(), position.y(), Direction.WEST);
+                position = rotateLeftAction.doAction();
                 break;
             case EAST:
                 position = Position.of(position.x(), position.y(), Direction.NORTH);
