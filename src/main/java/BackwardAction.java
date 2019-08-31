@@ -25,9 +25,7 @@ public class BackwardAction {
             case EAST:
             case WEST:
             case NORTH:
-                return position.subY(1);
             case SOUTH:
-                return position.plusY(1);
             default:
                 throw new IllegalStateException("Invalid direction.");
         }
