@@ -39,7 +39,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void should_forward() {
+    public void should_forward_east() {
         MarsRover marsRover = new MarsRover();
         marsRover.workRage(Area.of(10, 10));
         marsRover.deploy(Position.of(5, 5, Direction.EAST));
@@ -48,12 +48,21 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void should_backward() {
+    public void should_backward_east() {
         MarsRover marsRover = new MarsRover();
         marsRover.workRage(Area.of(10, 10));
         marsRover.deploy(Position.of(5, 5, Direction.EAST));
         Position position = marsRover.backward();
         assertThat(position, is(Position.of(4, 5, Direction.EAST)));
+    }
+
+    @Test
+    public void should_forward_west(){
+        MarsRover marsRover = new MarsRover();
+        marsRover.workRage(Area.of(10, 10));
+        marsRover.deploy(Position.of(5, 5, Direction.WEST));
+        Position position = marsRover.forward();
+        assertThat(position, is(Position.of(4, 5, Direction.WEST)));
     }
 
 }
