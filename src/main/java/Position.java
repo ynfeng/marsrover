@@ -12,16 +12,12 @@ public class Position {
         this.direction = direction;
     }
 
-    public void plusX(int x) {
-        this.x += x;
+    public Position plusX(int x) {
+        return of(this.x + 1, y, direction);
     }
 
-    public void subX(int x) {
-        this.x -= x;
-    }
-
-    public void plusY(int y) {
-        this.y += y;
+    public Position subX(int x) {
+        return of(this.x - 1, y, direction);
     }
 
     public int x() {

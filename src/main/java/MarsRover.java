@@ -25,7 +25,7 @@ public class MarsRover {
     public Position forward() {
         switch (position.direction()) {
             case EAST:
-                position.plusX(1);
+                position = position.plusX(1);
                 break;
         }
         return position;
@@ -34,7 +34,7 @@ public class MarsRover {
     public Position backward() {
         switch (position.direction()) {
             case EAST:
-                position.subX(1);
+                position = position.subX(1);
                 break;
         }
         return position;
