@@ -111,30 +111,30 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void should_rotate_left_to_north_given_face_to_west() {
+    public void should_rotate_left_to__given_face_to_west() {
         MarsRover marsRover = new MarsRover();
         marsRover.workArea(Area.of(10, 10));
         marsRover.deploy(Position.of(5, 5, Direction.WEST));
         Position position = marsRover.rotateLeft();
-        assertThat(position, is(Position.of(5, 5, Direction.NORTH)));
+        assertThat(position, is(Position.of(5, 5, Direction.SOUTH)));
     }
 
     @Test
-    public void should_rotate_left_to_east_given_face_to_north() {
+    public void should_rotate_left_to_west_given_face_to_north() {
         MarsRover marsRover = new MarsRover();
         marsRover.workArea(Area.of(10, 10));
         marsRover.deploy(Position.of(5, 5, Direction.NORTH));
         Position position = marsRover.rotateLeft();
-        assertThat(position, is(Position.of(5, 5, Direction.EAST)));
+        assertThat(position, is(Position.of(5, 5, Direction.WEST)));
     }
 
     @Test
-    public void should_rotate_left_to_south_given_face_to_east() {
+    public void should_rotate_left_to_north_given_face_to_east() {
         MarsRover marsRover = new MarsRover();
         marsRover.workArea(Area.of(10, 10));
         marsRover.deploy(Position.of(5, 5, Direction.EAST));
         Position position = marsRover.rotateLeft();
-        assertThat(position, is(Position.of(5, 5, Direction.SOUTH)));
+        assertThat(position, is(Position.of(5, 5, Direction.NORTH)));
     }
 
     @Test
