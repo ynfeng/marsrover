@@ -15,5 +15,9 @@ public interface Command {
         return new RotateRightCommand(marsRover);
     }
 
+    static Command rotateLeftCommand(MarsRover marsRover) {
+        return new RotateLeftCommand(marsRover);
+    }
+
     void execute();
 }
