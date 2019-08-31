@@ -13,6 +13,9 @@ public class PosistionSensorTest {
         PosistionSensor posistionSensor = new PosistionSensor();
         boolean result = posistionSensor.isInWorkArea(Area.of(10, 10), Position.of(2, 3, Direction.WEST));
         assertThat(result, is(true));
+
+        result = posistionSensor.isInWorkArea(Area.of(10, 10), Position.of(11, 10, Direction.WEST));
+        assertThat(result, is(false));
     }
 
 }
