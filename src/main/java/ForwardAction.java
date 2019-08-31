@@ -25,9 +25,7 @@ public class ForwardAction {
         switch (position.direction()) {
             case WEST:
             case NORTH:
-                return position.plusY(1);
             case SOUTH:
-                return position.subY(1);
             default:
                 return position;
         }
