@@ -191,4 +191,14 @@ public class MarsRoverTest {
         Position position = marsRover.executeBatchCommand(commands);
         assertThat(position, is(Position.of(3, 5, Direction.NORTH)));
     }
+
+    @Test
+    public void should_not_forward_out_of_work_area_when_face_to_west() {
+        MarsRover marsRover = new MarsRover();
+        marsRover.workArea(Area.of(1, 1));
+        marsRover.deploy(Position.of(0, 0, Direction.WEST));
+        marsRover.forward();
+        Position position = marsRover.forward();
+        assertThat(position, is(Position.of(0, 0, Direction.WEST)));
+    }
 }
