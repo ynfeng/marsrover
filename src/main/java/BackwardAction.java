@@ -6,7 +6,18 @@ public class BackwardAction {
     }
 
     public static BackwardAction createBackwardAction(Position position) {
-        return new BackwardAction(position);
+        switch (position.direction()) {
+            case EAST:
+                return new EastBackwardAction(position);
+            case WEST:
+                return new WestBackwardAction(position);
+            case NORTH:
+                return new NorthBackwardAction(position);
+            case SOUTH:
+                return new SouthBackwardAction(position);
+            default:
+                throw new IllegalStateException("Invalid direction.");
+        }
     }
 
     public Position backward() {
