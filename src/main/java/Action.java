@@ -56,7 +56,7 @@ public abstract class Action {
     public static Action createRotateRightAction(Position position) {
         switch (position.direction()) {
             case EAST:
-//                return new EastRotateRightAction(position);
+                return new EastRotateRightAction(position);
             case WEST:
                 return new WestRotateRightAction(position);
             case NORTH:
