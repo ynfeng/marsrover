@@ -199,7 +199,6 @@ public class MarsRoverTest {
         marsRover.deploy(Position.of(0, 0, Direction.EAST));
         marsRover.forward();
         marsRover.forward();
-        marsRover.forward();
         Position position = marsRover.forward();
         assertThat(position, is(Position.of(1, 0, Direction.EAST)));
     }
