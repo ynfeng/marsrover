@@ -65,4 +65,13 @@ public class MarsRoverTest {
         assertThat(position, is(Position.of(4, 5, Direction.WEST)));
     }
 
+    @Test
+    public void should_backward_west(){
+        MarsRover marsRover = new MarsRover();
+        marsRover.workRage(Area.of(10, 10));
+        marsRover.deploy(Position.of(5, 5, Direction.WEST));
+        Position position = marsRover.backward();
+        assertThat(position, is(Position.of(6, 5, Direction.WEST)));
+    }
+
 }
