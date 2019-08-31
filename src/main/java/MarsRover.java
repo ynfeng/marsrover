@@ -87,6 +87,9 @@ public class MarsRover {
             case NORTH:
                 position = Position.of(position.x(), position.y(), Direction.WEST);
                 break;
+            case WEST:
+                position = Position.of(position.x(), position.y(), Direction.SOUTH);
+                break;
         }
         return position;
     }
