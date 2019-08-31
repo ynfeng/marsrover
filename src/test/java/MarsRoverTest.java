@@ -165,7 +165,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    public void should_rotate_right_to_south_given_face_to_west() {
+    public void should_rotate_right_to_north_given_face_to_west() {
         MarsRover marsRover = new MarsRover();
         marsRover.workArea(Area.of(10, 10));
         marsRover.deploy(Position.of(5, 5, Direction.WEST));
