@@ -10,11 +10,11 @@ public class MarsRover {
         this.position = position;
     }
 
-    public void workRage(Area workArea) {
+    public void workArea(Area workArea) {
         this.workArea = workArea;
     }
 
-    public Area workRage() {
+    public Area workArea() {
         return workArea;
     }
 
