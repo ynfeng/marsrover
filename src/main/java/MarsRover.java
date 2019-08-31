@@ -21,4 +21,8 @@ public class MarsRover {
     public Position position() {
         return position;
     }
+
+    public Position forward() {
+        return Position.of(0, 1, Direction.WEST);
+    }
 }

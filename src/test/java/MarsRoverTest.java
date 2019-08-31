@@ -38,5 +38,13 @@ public class MarsRoverTest {
         assertThat(marsRover.position(), is(Position.of(0, 0, Direction.WEST)));
     }
 
+    @Test
+    public void should_forward() {
+        MarsRover marsRover = new MarsRover();
+        marsRover.workRage(Area.of(10, 10));
+        marsRover.deploy(Position.of(0, 0, Direction.WEST));
+        Position position = marsRover.forward();
+        assertThat(position, is(Position.of(0, 1, Direction.WEST)));
+    }
 
 }
