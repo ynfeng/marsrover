@@ -20,6 +20,13 @@ public class MarsRoverTest {
     public void should_set_work_range() {
         MarsRover marsRover = new MarsRover();
         marsRover.workRange(Area.of(10, 10));
+        assertThat(ma, is())
+    }
+
+    @Test
+    public void should_deploy_mars_rover(){
+        MarsRover marsRover = new MarsRover();
+        marsRover.deploy(0,0,"W");
     }
 
 
