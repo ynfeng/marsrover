@@ -2,14 +2,34 @@
  * @author fynwin@gmail.com
  */
 public class Position {
-    private final Direction direction;
-    private final int x;
-    private final int y;
+    private Direction direction;
+    private int x;
+    private int y;
 
     private Position(int x, int y, Direction direction) {
         this.x = x;
         this.y = y;
         this.direction = direction;
+    }
+
+    public void plusX(int x) {
+        this.x += x;
+    }
+
+    public void plusY(int y) {
+        this.y += y;
+    }
+
+    public int x() {
+        return x;
+    }
+
+    public int y() {
+        return y;
+    }
+
+    public Direction direction() {
+        return direction;
     }
 
     public static Position of(int x, int y, Direction direction) {

@@ -23,6 +23,11 @@ public class MarsRover {
     }
 
     public Position forward() {
+        switch (position.direction()) {
+            case EAST:
+                position.plusX(1);
+                break;
+        }
         return Position.of(0, 1, Direction.EAST);
     }
 
