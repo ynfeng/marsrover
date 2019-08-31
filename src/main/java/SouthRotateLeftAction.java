@@ -7,7 +7,7 @@ public class SouthRotateLeftAction extends Action {
     }
 
     @Override
-    Position doAction() {
+    Position doAction(MarsRover marsRover) {
         return Position.of(position.x(), position.y(), Direction.WEST);
     }
 }

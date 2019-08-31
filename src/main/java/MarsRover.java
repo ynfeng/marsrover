@@ -26,25 +26,25 @@ public class MarsRover {
 
     public Position forward() {
         Action forwardAction = Action.createForwardAction(position);
-        position = forwardAction.doAction();
+        position = forwardAction.doAction(this);
         return position;
     }
 
     public Position backward() {
         Action backwardAction = Action.createBackwardAction(position);
-        position = backwardAction.doAction();
+        position = backwardAction.doAction(this);
         return position;
     }
 
     public Position rotateLeft() {
         Action rotateLeftAction = Action.createRotateLeftAction(position);
-        position = rotateLeftAction.doAction();
+        position = rotateLeftAction.doAction(this);
         return position;
     }
 
     public Position rotateRight() {
         Action rotateRightAction = Action.createRotateRightAction(position);
-        position = rotateRightAction.doAction();
+        position = rotateRightAction.doAction(this);
         return position;
     }
 

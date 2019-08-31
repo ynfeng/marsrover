@@ -68,5 +68,5 @@ public abstract class Action {
         }
     }
 
-    abstract Position doAction();
+    abstract Position doAction(MarsRover marsRover);
 }

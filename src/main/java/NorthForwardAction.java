@@ -7,7 +7,7 @@ public class NorthForwardAction extends Action{
     }
 
     @Override
-    public Position doAction() {
+    public Position doAction(MarsRover marsRover) {
         return position.plusY(1);
     }
 }

@@ -3,7 +3,7 @@
  */
 public class EastBackwardAction extends Action{
     @Override
-    public Position doAction() {
+    public Position doAction(MarsRover marsRover) {
         return position.subX(1);
     }
 
