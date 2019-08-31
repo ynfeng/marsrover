@@ -38,20 +38,7 @@ public class MarsRover {
 
     public Position rotateLeft() {
         Action rotateLeftAction = Action.createRotateLeftAction(position);
-        switch (position.direction()) {
-            case SOUTH:
-                position = rotateLeftAction.doAction();
-                break;
-            case WEST:
-                position = rotateLeftAction.doAction();
-                break;
-            case NORTH:
-                position = rotateLeftAction.doAction();
-                break;
-            case EAST:
-                position = rotateLeftAction.doAction();
-                break;
-        }
+        position = rotateLeftAction.doAction();
         return position;
     }
 
