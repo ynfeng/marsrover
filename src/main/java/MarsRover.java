@@ -79,7 +79,7 @@ public class MarsRover {
     public Position rotateRight() {
         switch (position.direction()){
             case SOUTH:
-                position = Position.of(position.x(), position.y(), Direction.EAST);
+                position = Position.of(position.x(), position.y(), Direction.NORTH);
                 break;
         }
         return position;
