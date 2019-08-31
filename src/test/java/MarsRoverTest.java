@@ -27,7 +27,7 @@ public class MarsRoverTest {
     @Test
     public void should_set_work_range() {
         MarsRover marsRover = new MarsRover();
-        marsRover.workRange(Area.of(10, 10));
+        Area.of(10, 10).workRange();
     }
 
     @Test
