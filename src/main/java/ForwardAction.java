@@ -7,7 +7,18 @@ public class ForwardAction {
     }
 
     static ForwardAction createForwardAction(Position position) {
-        return new ForwardAction(position);
+        switch (position.direction()) {
+            case EAST:
+                return new EastForwardAction(position);
+            case WEST:
+                return new WestForwardAction(position);
+            case NORTH:
+                return new NorthForwardAction(position);
+            case SOUTH:
+                return new SouthForwardAction(position);
+            default:
+                throw new IllegalStateException("Invalid direction");
+        }
     }
 
     public Position forward() {
