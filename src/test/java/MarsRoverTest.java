@@ -83,13 +83,13 @@ public class MarsRoverTest {
         assertThat(position, is(Position.of(5, 6, Direction.NORTH)));
     }
 
-//    @Test
-//    public void should_backward_north(){
-//        MarsRover marsRover = new MarsRover();
-//        marsRover.workRage(Area.of(10, 10));
-//        marsRover.deploy(Position.of(5, 5, Direction.NORTH));
-//        Position position = marsRover.backward();
-//        assertThat(position, is(Position.of(5, 6, Direction.NORTH)));
-//    }
+    @Test
+    public void should_backward_north(){
+        MarsRover marsRover = new MarsRover();
+        marsRover.workRage(Area.of(10, 10));
+        marsRover.deploy(Position.of(5, 5, Direction.NORTH));
+        Position position = marsRover.backward();
+        assertThat(position, is(Position.of(5, 4, Direction.NORTH)));
+    }
 
 }

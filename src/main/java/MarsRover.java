@@ -45,6 +45,9 @@ public class MarsRover {
             case WEST:
                 position = position.plusX(1);
                 break;
+            case NORTH:
+                position = position.subY(1);
+                break;
         }
         return position;
     }

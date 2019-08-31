@@ -24,6 +24,10 @@ public class Position {
         return of(x, this.y + y, direction);
     }
 
+    public Position subY(int y) {
+        return of(x, this.y - y, direction);
+    }
+
     public int x() {
         return x;
     }
