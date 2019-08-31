@@ -44,7 +44,7 @@ public class MarsRoverTest {
         marsRover.workRage(Area.of(10, 10));
         marsRover.deploy(Position.of(0, 0, Direction.EAST));
         Position position = marsRover.forward();
-        assertThat(position, is(Position.of(0, 1, Direction.EAST)));
+        assertThat(position, is(Position.of(1, 0, Direction.EAST)));
     }
 
     @Test

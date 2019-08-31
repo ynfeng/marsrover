@@ -28,7 +28,7 @@ public class MarsRover {
                 position.plusX(1);
                 break;
         }
-        return Position.of(0, 1, Direction.EAST);
+        return position;
     }
 
     public Position backward() {
